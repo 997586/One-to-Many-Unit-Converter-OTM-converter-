@@ -1,0 +1,142 @@
+<html>
+<head>
+    <style>
+        .design{
+        
+			border-radius: 25px;
+			margin: 7% 25% 0% 25%;
+		
+			border: 5px double rgb(0, 0, 0);
+			border-color: rgb(27, 27, 27);
+			background-color:aqua;
+            
+			
+		}
+        .sub{
+            
+			border-radius: 100px;
+			height: 25px;
+			width: 100px;
+			border-color:burlywood;
+		}
+
+        .sub:hover {
+			cursor: pointer;
+			transition-duration: 100ms;
+			transform: scale(1.1);
+		}
+        .res{
+            border-radius: 100px;
+            height:25px;
+            width: 110px;
+            border-color: rgb(0,140,255);
+        }
+            .res:hover{
+            cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+
+        }
+       
+        
+    
+    </style>
+   
+        
+        <title>hello</title>
+        <script type="text/javascript">
+            function computej()
+            {
+                  let joule,kilojoule,kilocalorie,gramcalorie;
+                  joule=document.getElementById("first").value;
+                  kilojoule=(joule / 1000);
+                  kilocalorie=(joule / 4184);
+                  gramcalorie=(joule / 4.184);
+                  document.getElementById("second").value=kilojoule;
+                  document.getElementById("third").value=kilocalorie;
+                  document.getElementById("fourth").value=gramcalorie;
+            }
+            function computekj()
+            {
+                 let joule,kilojoule,kilocalorie,gramcalorie;
+                  kilojoule=document.getElementById("second").value;
+                  joule=(kilojoule * 1000);
+                  kilocalorie=(kilojoule / 4.184);
+                  gramcalorie=(kilojoule * 239);
+                  document.getElementById("first").value=joule;
+                  document.getElementById("third").value=kilocalorie;
+                  document.getElementById("fourth").value=gramcalorie;
+            }
+            function computekc()
+            {
+                let joule,kilojoule,kilocalorie,gramcalorie;
+                  kilocalorie=document.getElementById("third").value;
+                  joule=(kilocalorie * 4184);
+                  kilojoule=(kilocalorie * 4.184);
+                  gramcalorie=(kilocalorie * 1000);
+                  document.getElementById("first").value=joule;
+                  document.getElementById("second").value=kilojoule;
+                  document.getElementById("fourth").value=gramcalorie;
+            }
+
+            function computegc()
+            {
+                  let joule,kilojoule,kilocalorie,gramcalorie;
+                  gramcalorie=document.getElementById("fourth").value;
+                  joule=(gramcalorie * 4184);
+                  kilojoule=(gramcalorie * 4.184);
+                  kilocalorie=(gramcalorie * 1000);
+                  document.getElementById("first").value=joule;
+                  document.getElementById("second").value=kilojoule;
+                  document.getElementById("third").value=kilocalorie;
+            }
+
+        </script>
+         <body background-image: url("DeccanLogo.jpg")>
+        <div class="design" >
+        
+        <form name="f2">
+        <h1 align="center">
+            <font size="50" color="black"><u>!Energy!</u></font> 
+
+        </h1>
+        <h2 align="center">
+            <font size="4" color="brown">Joule:-</font>
+            <input type="text" id="first" placeholder="joule">
+        </input>
+        </h2>
+        <h3 align="center">
+            <font size="4" color="brown">Kilojoule:-</font>
+            <input type="text" id="second" placeholder="kj">
+        </input>
+
+        </h3>
+        <tr><h4 align="center">
+            <td><font size="text" color="brown">Kilocalorie:-</font></td>
+            <td><input type="text" id="third" placeholder="kc"></td>
+        </input>
+
+        </h4></tr>
+        <h5 align="center">
+            <font size="4" color="brown">Gramcalorie:-
+             <input type="text" id="fourth" placeholder="gc"></input>
+            </font>
+
+        </h5>
+    
+        <p align="center">
+        <input type="button" class="sub" onclick="computej();" value="Cal Joule">
+        <input type="button" class="sub" onclick="computekj();" value="Cal kilojoule">
+        <input type="button" class="sub" onclick="computekc();" value="Cal Kilocalorie">
+        <input type="button" class="sub" onclick="computegc();" value="Cal Gramcalorie"></p>
+        </div>
+        
+     <input type="reset" class="res" value="Reset"/>   
+</form>
+
+  
+<a href="Start.html"></a>
+<input type="button" class="res" onclick="location.href='Start.html'" value="Choose Another">
+</body>
+</head>
+</html>

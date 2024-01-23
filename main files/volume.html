@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            .example {
+			border-radius: 25px;
+			margin: 7% 25% 0% 25%;
+		
+			border: 5px inset rgb(0, 0, 0);
+			border-color: crimson;
+			background-color: rgb(192, 198, 255);
+			
+		}
+
+        
+		
+			
+        
+
+		.sub {
+			border-radius: 100px;
+			height: 25px;
+			width: 100px;
+			border-color: rgb(255, 0, 170);
+		}
+
+		.sub:hover {
+			cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+		}
+		.container{
+			align-items: center;
+			justify-content: center;
+
+		}
+        .res{
+            border-radius: 100px;
+            height:25px;
+            width: 110px;
+            border-color: rgb(0,140,255);
+        }
+            .res:hover{
+            cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+
+        }
+        </style>
+        <title>hello</title>
+        <script type="text/javascript">
+          function computeliter(){
+            let liter,milliliter;
+            liter=parseInt(document.getElementById("first").value);
+            milliliter=liter*1000;
+            document.getElementById("second").value=milliliter;
+            
+          }
+          function computemilliliter(){
+            let liter,milliliter;
+            milliliter=parseInt(document.getElementById("second").value);
+            liter=milliliter/1000;
+            document.getElementById("first").value=liter;
+            
+          }
+
+        </script>
+    </head>
+    <div class="example">
+        <form name="f1">
+            <h1 align="center"><font size="50" color="red"><u>!Volume!</u></font></h1>
+            <h2 align="center"><font size="4" color="red">Liter:- 
+                <input type="text" placeholder="liter" id="first"/>
+            </font>
+        </h2>
+        <h3 align="center"><font size="4" color="red">Milliliter:- 
+            <input type="text" id="second" placeholder="milli"/>       
+         </font>
+        </h3>
+        <p align="center">
+            <input type="button" class="sub" onclick="computeliter();" value="Cal Liter"/>
+            <input type="button" class="sub" onclick="computemilliliter();" value="Cal Milliliter"/>
+            
+        </p>
+    </div>
+    <input type="reset" class="res" value="reset" />
+        </form>
+       
+    
+    <a href="Start.html"></a>
+    <input type="button" class="res" onclick="location.href='Start.html'" value="Choose Another">
+    <div class="des">
+
+    </div>
+</html>

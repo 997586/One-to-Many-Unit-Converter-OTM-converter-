@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+	<style>
+		
+		.example {
+			border-radius: 25px;
+			margin: 7% 25% 0% 25%;
+
+			border: 5px inset rgb(0, 0, 0);
+			border-color: crimson;
+			background-color: rgb(192, 198, 255);
+
+		}
+
+		.sub {
+			border-radius: 100px;
+			height: 25px;
+			width: 100px;
+			border-color: rgb(255, 0, 170);
+		}
+
+		.sub:hover {
+			cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+		}
+
+		.container {
+			align-items: center;
+			justify-content: center;
+
+		}
+		.res{
+            border-radius: 100px;
+            height:25px;
+            width: 110px;
+            border-color: rgb(0,140,255);
+        }
+            .res:hover{
+            cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+
+        }
+	</style>
+	<title>hello</title>
+	<script type="text/javascript">
+		function computes() {
+			let minute, hours, seconds;
+			seconds = parseInt(document.getElementById("first").value);
+			hours = (seconds / 3600);
+			minute = (seconds / 60);
+			document.getElementById("second").value = minute;
+			document.getElementById("third").value = hours;
+		}
+
+		function computem() {
+			let minute, hours, seconds;
+			minutes = parseInt(document.getElementById("second").value);
+			hours = (minutes / 60);
+			seconds = (minutes * 60);
+			document.getElementById("third").value = hours;
+			document.getElementById("first").value = seconds;
+		}
+
+		function computeh() {
+			let minute, hours, seconds;
+			hours = parseInt(document.getElementById("third").value);
+			minute = (hours * 60);
+			seconds = (minute * 60);
+			document.getElementById("second").value = minute;
+			document.getElementById("first").value = seconds;
+		}
+
+	</script>
+</head>
+
+
+<div class="example">
+
+	
+		<form name="f1">
+
+
+			<h1 align="center">
+				<font color="red" size="50" align="center" bgcolor="yellow"><u>!Time!</u></font>
+			</h1>
+			<h2 align="center">
+				<font size="4" color="red">Seconds:-
+					<input type="text" id="first" placeholder="sec" />
+				</font>
+			</h2>
+			
+			<h3 align="center">
+				<font size="4" color="red">Minutes:-
+					<input type="text" id="second" placeholder="min" />
+				</font>
+			</h3>
+			
+					<h2 align="center">
+						<font size="4" color="red">Hours:-
+							<input type="text" id="third" placeholder="hour" />
+						</font>
+					</h2>
+
+					<p align="center">
+
+
+						<input type="button" class="sub" onclick="computes();" value="Cal Seconds">
+						<input type="button" class="sub" onclick="computem();" value="Cal Minutes">
+						<input type="button" class="sub" onclick="computeh();" value="Cal Hours">
+						
+					</p>
+				</div>
+				<input type="reset" class="res" value="Reset" />
+		</form>
+		
+
+	
+
+
+<a href="Start.html"></a>
+<input type="button" class="res" onclick="location.href='Start.html'" value="Choose Another">
+
+</html>

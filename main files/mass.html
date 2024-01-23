@@ -1,0 +1,141 @@
+<html>
+<head>
+    <style>
+       
+        .design{
+        
+			border-radius: 25px;
+			margin: 7% 25% 0% 25%;
+		
+			border: 5px double rgb(0, 0, 0);
+			border-color: rgb(27, 27, 27);
+			background-color:aqua;
+            
+			
+		}
+        .sub{
+            
+			border-radius: 100px;
+			height: 25px;
+			width: 100px;
+			border-color:burlywood;
+		}
+
+        .sub:hover {
+			cursor: pointer;
+			transition-duration: 100ms;
+			transform: scale(1.1);
+		}
+        .res{
+            border-radius: 100px;
+            height:25px;
+            width: 110px;
+            border-color: rgb(0,140,255);
+        }
+            .res:hover{
+            cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+
+        }
+       
+        
+    
+    </style>
+   
+        
+        <title>hello</title>
+        <script type="text/javascript">
+            function computek()
+            {
+                  let kilogram,gram,tonne;
+                  kilogram=document.getElementById("first").value;
+                  gram=(kilogram * 1000);
+                  tonne=(kilogram  / 1000);
+                  pounds=(kilogram * 2.205);
+                  document.getElementById("second").value=gram;
+                  document.getElementById("third").value=tonne;
+                  document.getElementById("fourth").value=pounds;
+            }
+            function computeg()
+            {
+                  let kilogram,gram,tonne;
+                  gram=document.getElementById("second").value;
+                  kilogram=(gram/ 1000);
+                  tonne=(gram  / 10000);
+                  pounds=(gram / 453.6);
+                  document.getElementById("first").value=kilogram;
+                  document.getElementById("third").value=tonne;
+                  document.getElementById("fourth").value=pounds;
+            }
+            function computet()
+            {
+                  let kilogram,gram,tonne;
+                  tone=document.getElementById("third").value;
+                  kilogram=(tone* 1000);
+                  gram=(tone * 10000);
+                  pounds=(tone * 2205);
+                  document.getElementById("first").value=kilogram;
+                  document.getElementById("second").value=gram;
+                  document.getElementById("fourth").value=pounds;
+            }
+
+            function computep()
+            {
+                  let kilogram,gram,tonne;
+                  gram=document.getElementById("fourth").value;
+                  kilogram=(gram/ 1000);
+                  tonne=(gram  / 10000);
+                  pounds=(gram / 453.6);
+                  document.getElementById("first").value=kilogram;
+                  document.getElementById("second").value=gram;
+                  document.getElementById("third").value=tonne;
+            }
+
+        </script>
+         <body background-image: url("DeccanLogo.jpg")>
+        <div class="design" >
+        
+        <form name="f2">
+        <h1 align="center">
+            <font size="50" color="black"><u>!Mass!</u></font> 
+
+        </h1>
+        <h2 align="center">
+            <font size="4" color="brown">Kilograms:-</font>
+            <input type="text" id="first" placeholder="kg's">
+        </input>
+        </h2>
+        <h3 align="center">
+            <font size="4" color="brown">Grams:-</font>
+            <input type="text" id="second" placeholder="grams">
+        </input>
+
+        </h3>
+        <tr><h4 align="center">
+            <td><font size="text" color="brown">Tonne:-</font></td>
+            <td><input type="text" id="third" placeholder="tonnes"></td>
+        </input>
+
+        </h4></tr>
+        <h5 align="center">
+            <font size="4" color="brown">Pounds:-
+             <input type="text" id="fourth" placeholder="pounds"></input>
+            </font>
+
+        </h5>
+        <p align="center">
+        <input type="button" class="sub" onclick="computek();" value="Cal Kilogram">
+        <input type="button" class="sub" onclick="computeg();" value="Cal Gram">
+        <input type="button" class="sub" onclick="computet();" value="Cal Tonne">
+        <input type="button" class="sub" onclick="computep();" value="Cal Pound"></p>
+        </div>
+        <input type="reset" class="res" value="Reset">  
+        
+</form>
+
+<a href="Start.html"></a>
+<input type="button" class="res" onclick="location.href='Start.html'" value="Choose  Another">
+</body>
+</head>
+</html>

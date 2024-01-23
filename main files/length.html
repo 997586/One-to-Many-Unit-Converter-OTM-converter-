@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <style>
+            .example {
+			border-radius: 25px;
+			margin: 7% 25% 0% 25%;
+		
+			border: 5px inset rgba(0, 0, 0, 0.219);
+			border-color: rgb(217, 220, 20);
+			background-color: rgb(0, 0, 0);
+			
+		}
+
+		.sub {
+			border-radius: 100px;
+			height: 25px;
+			width: 100px;
+			border-color: rgb(0, 140, 255);
+		}
+
+		.sub:hover {
+			cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+		}
+		.container{
+			align-items: center;
+			justify-content: center;
+
+		}
+        .res{
+            border-radius: 100px;
+            height:25px;
+            width: 110px;
+            border-color: rgb(0,140,255);
+        }
+            .res:hover{
+            cursor: pointer;
+			transition-duration: 500ms;
+			transform: scale(1.1);
+
+        }
+        </style>
+        
+    <title>hello</title>
+    <script type="text/javascript">
+        function computem(){
+        let meter,kiloMeter,millimeter,mille,centimeter;
+        meter = parseInt(document.getElementById("first").value);
+        kilometer= (meter / 1000);
+        millimeter= ( meter * 1000);
+        mille= (meter / 1609);
+        centimeter= (meter * 100);
+
+        document.getElementById("second").value= kilometer;
+        document.getElementById("third").value= millimeter;
+        document.getElementById("fourth").value= mille;
+        document.getElementById("fifth").value= centimeter;
+        }
+        
+         function computekm(){
+         let meter,kiloMeter,millimeter,mile,centimeter;
+        kilometer = parseInt(document.getElementById("second").value);
+        meter= (kilometer * 1000);
+        millimeter= ( kilometer * 10000);
+        mile= (kilometer / 1.609);
+        centimeter= (kilometer * 100000);
+
+        document.getElementById("first").value= meter;
+        document.getElementById("third").value= millimeter;
+        document.getElementById("fourth").value= mile;
+        document.getElementById("fifth").value= centimeter;
+        }
+        function computemilli(){
+         let meter,kiloMeter,millimeter,mile,centimeter;
+        millimeter = parseInt(document.getElementById("third").value);
+        kilometer= (millimeter / 10000);
+        meter= (millimeter / 1000);
+        mile= (millimeter / 1609000);
+        centimeter= (millimeter / 10);
+
+        document.getElementById("first").value= kiloMeter;
+        document.getElementById("second").value= meter;
+        document.getElementById("fourth").value= mile;
+        document.getElementById("fifth").value= centimeter;
+        }
+        function computemile(){
+         let meter,kiloMeter,millimeter,mile,centimeter;
+        mile = parseInt(document.getElementById("fourth").value);
+        kilometer= (mile * 1.609 );
+        meter= (mile * 1609);
+        millimeter= (mile * 160900);
+        centimeter= (mile * 160900 );
+
+        document.getElementById("second").value= kilometer;
+        document.getElementById("first").value= meter;
+        document.getElementById("third").value= millimeter;
+        document.getElementById("fifth").value= centimeter;
+        }
+        function computecenti(){
+         let meter,kiloMeter,millimeter,milee,centimeter;
+        centimeter = parseInt(document.getElementById("fifth").value);
+        kilometer= ( centimeter / 100000 );
+        meter= (centimeter / 100);
+        millimeter= (centimeter * 10);
+        mile= (centimeter / 160900)
+
+        document.getElementById("second").value= kilometer;
+        document.getElementById("first").value= meter;
+        document.getElementById("third").value= millimeter;
+        document.getElementById("fourth").value= mile;
+        }
+    </script>
+    </head>
+
+     <div class="example">
+        <form name="f1">
+            <h1 align="center"><font size="50" color="yellow"><u>!Length!</u></font></h1>
+            <h2 align="center"><font  size="4" color="yellow">Meter:-
+                <input typ="text" placeholder="Meter" id="first"/>  
+                </font>
+                </h2>
+                <h3 align="center"><font size="4" color="yellow">KiloMeter:-
+                    <input type="text" placeholder="Kilometer" id="second"/>
+                    </font>
+                    </h3>
+                    <h4 align="center"><font  size="4" color="yellow">Millimeter:-
+                       <input type="text" placeholder="Millimeter" id="third"/>
+                       </font>
+                       </h4>
+                       <h5 align="center"><font  size="4" color="yellow">Mile:-
+                        <input type="text" placeholder="Mille" id="fourth"/>
+                        </font>
+                        </h5>
+                        <h6 align="center"><font  size="4" color="yellow">Centimeter:-
+                        <input type="text" placeholder="Centimeter" id="fifth">
+                        </font>
+                        </h6>
+                        <p align="center">
+                       <input type="button" class="sub" onclick="computem();" value="Cal Meter"/>
+                       <input type="button" class="sub" onclick="computekm();" value="Cal Kilometer" />
+                       <input type="button" class="sub" onclick="computemilli();" value="Cal Millimeter" />
+                       <input type="button" class="sub" onclick="computemile();" value="Cal Mile" />
+                       <input type="button" class="sub" onclick="computecenti();" value="Cal Centimeter" />
+                       </p>
+                    </div>
+                    <input type="reset" class="res" value="Reset">
+            </form>
+        
+    
+    <a href="Start.html"></a>
+<input type="button" class="res" onclick="location.href='Start.html'" value="Choose Another">
+    </html>
